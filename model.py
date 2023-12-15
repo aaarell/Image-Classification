@@ -55,4 +55,4 @@ test_loss, test_acc = model.evaluate(test_generator)
 print(f'Test accuracy: {test_acc}')
 
 # Save the model
-model.save("mobilenet_model.h5")
+model.save("MobileNet.h5")
