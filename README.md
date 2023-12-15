@@ -3,8 +3,7 @@
 Abrar Riner Lawdza'i - 202010370311441 - Machine Learning C
 
 # Dataset
-Dataset yang digunakan adalah data citra RPS, dapat di akses melalui link :
-https://drive.google.com/drive/folders/1svbxMmfvzo1xmm_2uAiUc083kmP6NKjg?usp=sharing
+Dataset yang digunakan adalah data citra RPS
 
 Berikut beberapa Augmentasi yang dilakukan pada RPS sebelum pembuatan model
 
