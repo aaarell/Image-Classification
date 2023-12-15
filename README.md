@@ -27,6 +27,4 @@ MobileNet adalah arsitektur CNN yang dikembangkan untuk aplikasi web maupun mobi
 
 2. Tampilan halaman untuk menampilkan hasil prediksi setelah upload gambar
 
-   ![Screenshot (217)](https://github.com/aaarell/Web-Deployment/assets/143507800/2cc20372-757f-40db-9a25-3fd1f67acdbc)
-
-   ![Screenshot (218)](https://github.com/aaarell/Web-Deployment/assets/143507800/2334ef8a-5a7b-46bc-aa52-45f2b2df2e78)
+   ![Screenshot (221)](https://github.com/aaarell/Web-Deployment/assets/143507800/891221ee-fe5f-42e6-a592-288efd75a479)
