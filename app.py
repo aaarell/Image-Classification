@@ -10,7 +10,7 @@ app.config['UPLOAD_FOLDER'] = 'uploads'
 model = load_model("mobilenet_model.h5")
 
 def preprocess_image(image_path):
-    img = load_img(image_path, target_size=(224, 224))  # Sesuaikan target_size dengan ukuran input model
+    img = load_img(image_path, target_size=(224, 224))
     img_array = img_to_array(img)
     img_array = np.expand_dims(img_array, axis=0)
     return img_array
@@ -48,7 +48,11 @@ def predict():
         # Get current timestamp
         current_time = int(time.time())
 
-        return render_template('index.html', prediction=prediction, accuracy=accuracy,
+        # Dictionary untuk memetakan label prediksi ke label gambar yang sesuai
+        label_mapping = {'Paper': 'paper', 'Rock': 'rock', 'Scissors': 'scissors'}
+        prediction_label = label_mapping.get(prediction, 'Unknown')
+
+        return render_template('index.html', prediction=prediction_label, accuracy=accuracy,
                                prediction_time=prediction_time, image_filename=image_filename, current_time=current_time)
 
 if __name__ == '__main__':

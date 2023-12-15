@@ -5,20 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1bdf6c66-a320-4b38-a755-d440fb35ea42" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/paper01-000.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/paper05-108.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/paper07-036.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/rock01-000.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/rock05ck01-108.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/rock07-k03-036.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/scissors01-000.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/testscissors01-108.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/testscissors03-036.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/paper01-002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/testscissors02-001.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +25,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
