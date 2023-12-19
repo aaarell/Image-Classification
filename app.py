@@ -7,7 +7,7 @@ import time
 
 app = Flask(__name__, static_url_path='/static')
 app.config['UPLOAD_FOLDER'] = 'uploads'
-model = load_model("MobileNet.h5")
+model = load_model("mobilenet_model.h5")
 
 def preprocess_image(image_path):
     img = load_img(image_path, target_size=(224, 224))
