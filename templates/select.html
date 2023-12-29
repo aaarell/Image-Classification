@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload Image</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+  
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  
+    .contact-section {
+      background-color: #fff;
+      padding: 50px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 100%; 
+      max-width: 800px; 
+      box-sizing: border-box; 
+    }
+  
+    .title-box {
+      text-align: center;
+    }
+  
+    .sec-title {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+  
+    .login100-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+  
+    .column {
+      flex: 1;
+      margin-right: 10px;
+    }
+  
+    .form-check label {
+      display: block;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    #selected_model {
+      width: auto; 
+      min-width: 150px; 
+    }
+  
+    .container-login100-form-btn {
+      text-align: center;
+      margin-top: 20px;
+    }
+  
+    .input100 {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  
+    .input100:focus {
+      outline: none;
+      border-color: #5cb85c;
+    }
+  
+    .symbol-input100 {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #666;
+    }
+  
+    .login100-form-btn {
+      background-color: #5cb85c;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+  
+    .login100-form-btn:hover {
+      background-color: #4cae4c;
+    }
+  
+    .wrap-input100 {
+      position: relative;
+    }
+  
+    @media (max-width: 768px) {
+      .row {
+        flex-direction: column;
+      }
+  
+      .column {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="contact-section" style="padding-top:50px;" id="predict1">
+    <div class="container">
+      <div class="title-box centred">
+        <div class="sec-title">Image Prediction Result</div>
+      </div>
+      <form class="login100-form validate-form" action="/predict" method="post" enctype="multipart/form-data">
+        <div class="row" style=" width: 35%; margin: auto; padding: 15px;">
+          <div class="column">
+            <div class="form-check form-check-inline">
+              <label for="selected_model">Select Model</label>
+            </div>
+          </div>
+          <div class="column">
+            <div class="form-check form-check-inline">
+              <select name="select_model" id="selected_model">
+                <option value='MobileNet Model'>MobileNet Model </option>
+                <option value='ResNet Model'>ResNet Model </option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="container-login100-form-btn">
+          <div class="wrap-input100 validate-input" data-validate="Image file is required" id="input">
+            <input class="input100" id="image-source" name="file" onchange="previewImage();" type="file"
+              alt="Input Image" accept="image/jpeg,image/jpg,image/png">
+            <span class="focus-input100"></span>
+            <span class="symbol-input100">
+              <i class="fa fa-file" aria-hidden="true"></i>
+            </span>
+          </div>
+        </div>
+        <div class="container-login100-form-btn">
+          <button class="login100-form-btn" type="submit">
+            Execute
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>  
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Function to check if the file input is empty
+      function isFileSelected() {
+        var fileInput = document.getElementById('image-source');
+        return fileInput.files.length > 0;
+      }
+
+      // Function to handle form submission
+      function handleFormSubmit(event) {
+        if (!isFileSelected()) {
+          // Show an alert or provide visual indication that a file needs to be selected
+          alert('Please upload a file before executing.');
+          event.preventDefault(); // Prevent form submission
+        }
+      }
+
+      // Attach the handleFormSubmit function to the form's submit event
+      var form = document.querySelector('.login100-form');
+      form.addEventListener('submit', handleFormSubmit);
+    });
+  </script>
+</body>
+</html>
