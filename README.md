@@ -2,6 +2,11 @@
 
 Abrar Riner Lawdza'i - 202010370311441 - Machine Learning C
 
+# Link ResNet Model
+Karena ukuran file modelnya terlalu besar, sehingga tidak dapat diunggah di GitHub, saya memasukkannya ke Google Drive.
+
+https://drive.google.com/drive/folders/19TThVmy47mprIQk1cOPLiWqf3kmQ1xG9?usp=sharing
+
 # Dataset
 Dataset yang digunakan adalah data citra RPS
 
