@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prediction Result</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: #f4f4f4;
+    }
+
+    .contact-section {
+      background-color: #fff;
+      padding: 30px 20px; 
+      margin: 0 auto;
+      max-width: 800px;
+    }
+
+    .title-box {
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    .sec-title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+      text-transform: none; 
+    }
+
+    .inner-content p {
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .inner-content p:first-child {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .inner-content p:last-child {
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    #myProgress {
+      width: 100%;
+      background-color: #ddd;
+      border-radius: 5px;
+      margin-top: 15px;
+    }
+
+    #myBar {
+      width: 0;
+      height: 20px;
+      background-color: #4CAF50;
+      text-align: center;
+      line-height: 20px;
+      color: white;
+      border-radius: 5px;
+    }
+
+    .sidebar-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .sidebar-content img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .sidebar-content button {
+      display: block;
+      margin-top: 15px;
+      padding: 8px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none; 
+    }
+
+    .sidebar-content button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="contact-section" id="result">
+    <div class="container">
+      <div class="title-box">
+        <div class="sec-title">Image Prediction Result</div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 col-md-12 col-sm-12 content-column">
+          <div class="inner-content">
+            <div class="contact-form-area">
+              <p>{{ model }} Model</p>
+              <p>Predicted Label : {{ labels[pred] }}</p>
+              Accuracy : {{ (probs|max) }}% | Prediction Time : {{ (run_time) }} seconds
+              <input type="hidden" id="probability" value={{(probs|max)}}>
+              <div id="myProgress">
+                <div id="myBar">0%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-12 col-sm-12 sidebar-column">
+          <div class="sidebar-content">
+            <img src="{{ url_for('static', filename=image_filename) }}" alt="" class="img-fluid">
+            <a href="/" style="text-decoration: none;"><button>Input New Image</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var accuracy = parseFloat("{{ (probs|max) }}");
+      var myBar = document.getElementById('myBar');
+      myBar.style.width = accuracy + '%';
+      myBar.textContent = accuracy + '%';
+
+      if (accuracy < 50) {
+        myBar.style.backgroundColor = '#944343';  // Red color
+      } else {
+        myBar.style.backgroundColor = '#4a9443';  // Green color
+      }
+    });
+  </script>
+</body>
+</html>
