@@ -31,6 +31,7 @@ ResNet : Digunakan dalam berbagai tugas pengenalan gambar dan pengolahan gambar 
    ![Screenshot (318)](https://github.com/aaarell/Image-Classification/assets/143507800/e6bc5612-588a-4600-831e-d3f9ff5ee609)
 
 3. Tampilan halaman untuk menampilkan hasil prediksi setelah upload gambar
+
    MobileNet Model :
    ![Screenshot (320)](https://github.com/aaarell/Image-Classification/assets/143507800/3c0da07b-c804-4613-bfe6-c50e00bf9bdb)
 
