@@ -15,16 +15,24 @@ Flask adalah framework web mikro yang ditulis dalam bahasa pemrograman Python. F
 ![fla16172661186968](https://github.com/aaarell/Image-Classification/assets/143507800/b4a36d2c-9cce-4469-8e37-1ca8cc08c1c6)
 
 # MobileNet
-MobileNet adalah arsitektur CNN yang dikembangkan untuk aplikasi web maupun mobile. Dirancang agar memberikan keseimbangan antara akurasi dan ukuran model, MobileNet biasanya digunakan dalam tugas-tugas seperti klasifikasi gambar di perangkat mobile atau website. Arsitektur ini fokus pada penggunaan daya komputasi yang efisien tanpa mengurangi kinerja, sehingga sangat sesuai untuk digunakan pada perangkat yang memiliki keterbatasan sumber daya. Berikut accuracy yang didapat dari model tersebut :
+MobileNet adalah arsitektur CNN yang dikembangkan untuk aplikasi web maupun mobile. Dirancang agar memberikan keseimbangan antara akurasi dan ukuran model, MobileNet biasanya digunakan dalam tugas-tugas seperti klasifikasi gambar di perangkat mobile atau website. Arsitektur ini fokus pada penggunaan daya komputasi yang efisien tanpa mengurangi kinerja, sehingga sangat sesuai untuk digunakan pada perangkat yang memiliki keterbatasan sumber daya. 
+MobileNet : Biasanya digunakan dalam aplikasi mobile dan edge computing di mana sumber daya terbatas.
 
-![Screenshot (214)](https://github.com/aaarell/Image-Classification/assets/143507800/d6cd42a6-6944-4144-baac-14272f05f646)
+# ResNet
+ResNet, singkatan dari "Residual Networks" adalah jenis CNN yang dikembangkan oleh Microsoft Research pada tahun 2015. Arsitektur ResNet dikenal karena kemampuannya untuk melatih CNN secara mendalam, yang sering kali sulit dilakukan oleh arsitektur sebelumnya karena masalah vanishing gradients.
+ResNet : Digunakan dalam berbagai tugas pengenalan gambar dan pengolahan gambar yang membutuhkan representasi fitur yang sangat dalam.
 
 # Web Deployment
 1. Tampilan halaman awal pada web
+   Jika ingin menjalankan proses execute, Anda perlu memasukkan gambar terlebih dahulu
+   
+   ![Screenshot (317)](https://github.com/aaarell/Image-Classification/assets/143507800/d074e768-9e89-44e9-a1d3-1c0730b63738)
+   
+   ![Screenshot (318)](https://github.com/aaarell/Image-Classification/assets/143507800/e6bc5612-588a-4600-831e-d3f9ff5ee609)
 
-   ![Screenshot (220)](https://github.com/aaarell/Image-Classification/assets/143507800/f5f40aa9-5a5b-4e53-baea-152cdfb7633b)
+3. Tampilan halaman untuk menampilkan hasil prediksi setelah upload gambar
+   MobileNet Model :
+   ![Screenshot (320)](https://github.com/aaarell/Image-Classification/assets/143507800/3c0da07b-c804-4613-bfe6-c50e00bf9bdb)
 
-2. Tampilan halaman untuk menampilkan hasil prediksi setelah upload gambar
-
-   ![Screenshot (221)](https://github.com/aaarell/Image-Classification/assets/143507800/71b73a24-ea8b-4437-9c0e-832493cd11d3)
-
+   ResNet Model :
+   ![Screenshot (321)](https://github.com/aaarell/Image-Classification/assets/143507800/64d94114-8430-4d72-9309-083c2fdf3099)
