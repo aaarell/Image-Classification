@@ -107,7 +107,7 @@
         <div class="col-lg-8 col-md-12 col-sm-12 content-column">
           <div class="inner-content">
             <div class="contact-form-area">
-              <p>{{ model }} Model</p>
+              <p>{{ model }}</p>
               <p>Predicted Label : {{ labels[pred] }}</p>
               Accuracy : {{ (probs|max) }}% | Prediction Time : {{ (run_time) }} seconds
               <input type="hidden" id="probability" value={{(probs|max)}}>
